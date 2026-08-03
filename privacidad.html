@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Café & Tueste Bistro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <style>
+        .img-fallback { display: flex; align-items: center; justify-content: center; background-color: #f5f5f4; color: #78716c; text-align: center; padding: 1rem; font-size: 0.875rem; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans flex flex-col min-h-screen">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50499990000" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 hover:scale-110 transition duration-300 text-3xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="font-serif text-2xl font-bold text-stone-900 tracking-tight">
+                    Café <span class="text-amber-700">&</span> Tueste.
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Inicio</a>
+                    <a href="catalogo.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Menú</a>
+                    <a href="contacto.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Contacto</a>
+                    <a href="carrito.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Carrito</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="carrito.html" class="relative p-2 text-stone-600 hover:text-amber-700 transition">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span class="cart-badge hidden absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-amber-600 rounded-full">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        
+<div class="max-w-4xl mx-auto px-4 py-16">
+    <h1 class="font-serif text-4xl font-bold text-stone-900 mb-8 border-b pb-4">Política de Privacidad</h1>
+    <div class="prose prose-stone max-w-none text-stone-600 space-y-6">
+        <p><strong>Última actualización:</strong> Agosto de 2026</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">1. Información que recopilamos</h3>
+        <p>Al utilizar Café & Tueste Bistro, podemos solicitarle que nos proporcione cierta información de identificación personal que pueda utilizarse para contactarlo o identificarlo. La información personal puede incluir, pero no se limita a: Nombre completo, Dirección de correo electrónico, Número de teléfono y Detalles de pago (procesados de forma segura a través de pasarelas de terceros como PayPal).</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">2. Uso de la Información</h3>
+        <p>Utilizamos la información recopilada para diversos fines, que incluyen:</p>
+        <ul class="list-disc pl-6">
+            <li>Procesar y gestionar sus pedidos en línea.</li>
+            <li>Notificarle sobre el estado de su pedido o cambios en el menú.</li>
+            <li>Brindar atención al cliente y soporte técnico.</li>
+            <li>Enviar información promocional si se ha suscrito a nuestro boletín.</li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-stone-900">3. Protección de Datos y Pasarelas de Pago</h3>
+        <p>Nos comprometemos a proteger su información. Todas las transacciones con tarjeta de crédito o plataformas digitales se procesan de manera cifrada a través de <strong>PayPal</strong> o pasarelas homologadas. Café & Tueste no almacena los datos de sus tarjetas de crédito o débito en nuestros servidores locales.</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">4. Almacenamiento Local (LocalStorage)</h3>
+        <p>Este sitio web utiliza <code>localStorage</code> del navegador web para mantener los productos en su carrito de compras de forma temporal. Estos datos se almacenan exclusivamente en su dispositivo y no se transmiten a nuestros servidores a menos que complete el proceso de compra (Checkout).</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">5. Contacto</h3>
+        <p>Si tiene preguntas sobre esta Política de Privacidad, puede contactarnos enviando un correo a <strong>soporte@cafeytueste.com</strong> o a través de nuestra línea de soporte por WhatsApp.</p>
+    </div>
+</div>
+
+    </main>
+    <footer class="bg-stone-900 text-stone-300 py-12 mt-12 border-t-4 border-amber-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="font-serif text-2xl font-bold text-white mb-4">Café & Tueste.</h3>
+                <p class="text-stone-400 mb-4">Elevando la experiencia del café hondureño.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-amber-500 transition">Inicio</a></li>
+                    <li><a href="catalogo.html" class="hover:text-amber-500 transition">Catálogo</a></li>
+                    <li><a href="contacto.html" class="hover:text-amber-500 transition">Soporte y Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+                <ul class="space-y-2 text-stone-400">
+                    <li><a href="privacidad.html" class="hover:text-amber-500 transition">Política de Privacidad</a></li>
+                    <li><a href="terminos.html" class="hover:text-amber-500 transition">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-stone-800 text-center text-stone-500 text-sm">
+            &copy; 2026 Café y Tueste Bistro. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="js/db.js"></script>
+    <script src="js/store.js"></script>
+    
+</body>
+</html>
