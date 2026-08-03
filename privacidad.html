@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Café & Tueste Bistro</title>
+    <title>Política de Privacidad - Café & Tueste Bistro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -42,19 +42,32 @@
     </nav>
     <main class="flex-grow">
         
-<div class="relative bg-stone-900 h-[600px] flex items-center justify-center overflow-hidden">
-    <img src="img/hero-bg.jpg" alt="Cafe Background" class="absolute inset-0 w-full h-full object-cover opacity-40 img-fallback-hero">
-    <div class="relative z-10 text-center px-4 max-w-3xl">
-        <h1 class="font-serif text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">El arte del buen café en cada taza.</h1>
-        <p class="text-lg md:text-xl text-stone-200 mb-10">Descubre nuestra selección premium de granos tostados artesanalmente y bebidas preparadas por baristas expertos.</p>
-        <a href="catalogo.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300">Explorar Menú Completo</a>
+<div class="max-w-4xl mx-auto px-4 py-16">
+    <h1 class="font-serif text-4xl font-bold text-stone-900 mb-8 border-b pb-4">Política de Privacidad</h1>
+    <div class="prose prose-stone max-w-none text-stone-600 space-y-6">
+        <p><strong>Última actualización:</strong> Agosto de 2026</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">1. Información que recopilamos</h3>
+        <p>Al utilizar Café & Tueste Bistro, podemos solicitarle que nos proporcione cierta información de identificación personal que pueda utilizarse para contactarlo o identificarlo. La información personal puede incluir, pero no se limita a: Nombre completo, Dirección de correo electrónico, Número de teléfono y Detalles de pago (procesados de forma segura a través de pasarelas de terceros como PayPal).</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">2. Uso de la Información</h3>
+        <p>Utilizamos la información recopilada para diversos fines, que incluyen:</p>
+        <ul class="list-disc pl-6">
+            <li>Procesar y gestionar sus pedidos en línea.</li>
+            <li>Notificarle sobre el estado de su pedido o cambios en el menú.</li>
+            <li>Brindar atención al cliente y soporte técnico.</li>
+            <li>Enviar información promocional si se ha suscrito a nuestro boletín.</li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-stone-900">3. Protección de Datos y Pasarelas de Pago</h3>
+        <p>Nos comprometemos a proteger su información. Todas las transacciones con tarjeta de crédito o plataformas digitales se procesan de manera cifrada a través de <strong>PayPal</strong> o pasarelas homologadas. Café & Tueste no almacena los datos de sus tarjetas de crédito o débito en nuestros servidores locales.</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">4. Almacenamiento Local (LocalStorage)</h3>
+        <p>Este sitio web utiliza <code>localStorage</code> del navegador web para mantener los productos en su carrito de compras de forma temporal. Estos datos se almacenan exclusivamente en su dispositivo y no se transmiten a nuestros servidores a menos que complete el proceso de compra (Checkout).</p>
+        
+        <h3 class="text-xl font-bold text-stone-900">5. Contacto</h3>
+        <p>Si tiene preguntas sobre esta Política de Privacidad, puede contactarnos enviando un correo a <strong>soporte@cafeytueste.com</strong> o a través de nuestra línea de soporte por WhatsApp.</p>
     </div>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="text-center mb-12">
-        <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-4">Recomendaciones del Barista</h2>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="featured-grid"></div>
 </div>
 
     </main>
@@ -91,33 +104,6 @@
     </footer>
     <script src="js/db.js"></script>
     <script src="js/store.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const featuredIds = ['cf6', 'c7', 'po1', 'p4'];
-    const grid = document.getElementById('featured-grid');
-    grid.innerHTML = PRODUCT_DB.filter(p => featuredIds.includes(p.id)).map(p => `
-        <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
-            <div class="relative aspect-[4/3] overflow-hidden bg-stone-100 img-fallback">
-                <img src="${p.img}" alt="${p.name}" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-10" onerror="this.style.display='none'">
-                <div class="z-0 text-center">
-                    <i class="fa-regular fa-image text-3xl mb-2 text-stone-400"></i><br>
-                    <span class="text-xs font-bold">${p.img.split('/').pop()}</span>
-                </div>
-                ${p.tag ? `<span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-20">${p.tag}</span>` : ''}
-            </div>
-            <div class="p-6 flex flex-col flex-grow">
-                <span class="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">${p.category}</span>
-                <h3 class="font-bold text-lg text-stone-900 mb-2">${p.name}</h3>
-                <div class="mt-auto flex items-center justify-between pt-4">
-                    <span class="font-bold text-xl text-stone-900">L. ${p.price.toFixed(2)}</span>
-                    <button onclick="window.appStore.add('${p.id}')" class="bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    `).join('');
-});
-</script>
+    
 </body>
 </html>

@@ -8,8 +8,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+<!-- PAYPAL SDK SANDBOX (Client ID = test) -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+
+    <style>
+        .img-fallback { display: flex; align-items: center; justify-content: center; background-color: #f5f5f4; color: #78716c; text-align: center; padding: 1rem; font-size: 0.875rem; }
+    </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans flex flex-col min-h-screen">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50499990000" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 hover:scale-110 transition duration-300 text-3xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-stone-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -19,6 +31,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Inicio</a>
                     <a href="catalogo.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Menú</a>
+                    <a href="contacto.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Contacto</a>
                     <a href="carrito.html" class="text-stone-600 hover:text-amber-700 font-medium transition">Carrito</a>
                 </div>
                 <div class="flex items-center">
@@ -41,20 +54,50 @@
                     <div>
                         <h3 class="text-lg font-bold text-stone-900 mb-4 border-b border-stone-100 pb-2">Datos Personales</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div><label class="block text-sm font-medium text-stone-700 mb-1">Nombre Completo *</label><input type="text" name="nombre" required class="w-full px-4 py-3 rounded-lg border border-stone-300 uppercase"></div>
-                            <div><label class="block text-sm font-medium text-stone-700 mb-1">Teléfono *</label><input type="tel" name="telefono" required class="w-full px-4 py-3 rounded-lg border border-stone-300"></div>
-                            <div class="sm:col-span-2"><label class="block text-sm font-medium text-stone-700 mb-1">Correo Electrónico *</label><input type="email" name="correo" required class="w-full px-4 py-3 rounded-lg border border-stone-300"></div>
+                            <div><label class="block text-sm font-medium text-stone-700 mb-1">Nombre Completo *</label><input type="text" id="form-nombre" name="nombre" required class="w-full px-4 py-3 rounded-lg border border-stone-300 uppercase"></div>
+                            <div><label class="block text-sm font-medium text-stone-700 mb-1">Teléfono *</label><input type="tel" id="form-telefono" name="telefono" required class="w-full px-4 py-3 rounded-lg border border-stone-300"></div>
+                            <div class="sm:col-span-2"><label class="block text-sm font-medium text-stone-700 mb-1">Correo Electrónico *</label><input type="email" id="form-correo" name="correo" required class="w-full px-4 py-3 rounded-lg border border-stone-300"></div>
                         </div>
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-stone-900 mb-4 border-b border-stone-100 pb-2">Método de Pago</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50"><input type="radio" name="pago" value="Efectivo" class="sr-only" checked><span class="w-full text-center font-medium">Efectivo</span></label>
-                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50"><input type="radio" name="pago" value="Tarjeta" class="sr-only"><span class="w-full text-center font-medium">Tarjeta</span></label>
-                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50"><input type="radio" name="pago" value="Transferencia" class="sr-only"><span class="w-full text-center font-medium">Transferencia</span></label>
+                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                                <input type="radio" name="pago" value="Efectivo" class="sr-only" checked>
+                                <span class="flex flex-col items-center justify-center w-full text-center">
+                                    <i class="fa-solid fa-money-bill-wave text-2xl text-stone-600 mb-2"></i>
+                                    <span class="font-medium text-stone-900">Efectivo</span>
+                                </span>
+                            </label>
+                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                                <input type="radio" name="pago" value="Transferencia" class="sr-only">
+                                <span class="flex flex-col items-center justify-center w-full text-center">
+                                    <i class="fa-solid fa-building-columns text-2xl text-stone-600 mb-2"></i>
+                                    <span class="font-medium text-stone-900">Transferencia</span>
+                                </span>
+                            </label>
+                            <label class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50">
+                                <input type="radio" name="pago" value="PayPal" class="sr-only">
+                                <span class="flex flex-col items-center justify-center w-full text-center">
+                                    <i class="fa-brands fa-paypal text-2xl text-[#00457C] mb-2"></i>
+                                    <span class="font-medium text-stone-900">PayPal Sandbox</span>
+                                </span>
+                            </label>
                         </div>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white text-lg font-bold py-4 rounded-xl transition flex justify-center items-center gap-2">Confirmar Pedido</button>
+                    
+                    <!-- Dynamic Buttons Container -->
+                    <div id="standard-btn-container">
+                        <button type="submit" id="submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white text-lg font-bold py-4 rounded-xl transition flex justify-center items-center gap-2">Confirmar Pedido</button>
+                    </div>
+                    
+                    <div id="paypal-btn-container" class="hidden mt-6">
+                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4 text-sm text-blue-800">
+                            <i class="fa-solid fa-circle-info mr-2"></i> El pago se procesará en <b>USD</b> usando una tasa de conversión (L. 25 = $1 USD).
+                        </div>
+                        <div id="paypal-buttons-render"></div>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -70,9 +113,10 @@
             </div>
         </div>
     </div>
+    
     <div id="success-screen" class="hidden max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-stone-100 p-10 text-center">
         <h2 class="font-serif text-3xl font-bold text-emerald-600 mb-2">¡Pedido Confirmado!</h2>
-        <p class="text-stone-600 mb-8">Hemos generado tu factura en formato PDF.</p>
+        <p class="text-stone-600 mb-8">Hemos generado tu factura en formato PDF con el diseño solicitado.</p>
         <button id="download-pdf-btn" class="bg-stone-900 text-white py-3 px-6 rounded-lg mr-2">Descargar Factura de Nuevo</button>
         <a href="index.html" class="bg-stone-200 text-stone-800 py-3 px-6 rounded-lg">Volver al Inicio</a>
     </div>
@@ -83,55 +127,140 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <h3 class="font-serif text-2xl font-bold text-white mb-4">Café & Tueste.</h3>
-                <p class="text-stone-400">Elevando la experiencia del café hondureño.</p>
+                <p class="text-stone-400 mb-4">Elevando la experiencia del café hondureño.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-stone-400 hover:text-amber-500 text-xl transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
             <div>
-                <h4 class="text-lg font-semibold text-white mb-4">Enlaces</h4>
+                <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
                 <ul class="space-y-2">
                     <li><a href="index.html" class="hover:text-amber-500 transition">Inicio</a></li>
                     <li><a href="catalogo.html" class="hover:text-amber-500 transition">Catálogo</a></li>
+                    <li><a href="contacto.html" class="hover:text-amber-500 transition">Soporte y Contacto</a></li>
                 </ul>
             </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+                <ul class="space-y-2 text-stone-400">
+                    <li><a href="privacidad.html" class="hover:text-amber-500 transition">Política de Privacidad</a></li>
+                    <li><a href="terminos.html" class="hover:text-amber-500 transition">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-stone-800 text-center text-stone-500 text-sm">
+            &copy; 2026 Café y Tueste Bistro. Todos los derechos reservados.
         </div>
     </footer>
     <script src="js/db.js"></script>
     <script src="js/store.js"></script>
     <script>
 let orderDataBackup = null;
+const CONVERSION_RATE = 25; // 1 USD = 25 LNL
+
 document.addEventListener('DOMContentLoaded', () => {
     const { cart } = window.appStore;
     if(cart.length === 0) { window.location.href = 'carrito.html'; return; }
+    
+    // Render Order Summary
     document.getElementById('checkout-items').innerHTML = cart.map(item => `<div class="flex justify-between text-sm"><span class="text-stone-700"><b>${item.qty}x</b> ${item.name}</span><span class="font-medium">L. ${(item.price * item.qty).toFixed(2)}</span></div>`).join('');
     const totals = window.appStore.getTotals();
     document.getElementById('chk-subtotal').textContent = `L. ${totals.subtotal.toFixed(2)}`;
     document.getElementById('chk-tax').textContent = `L. ${totals.tax.toFixed(2)}`;
     document.getElementById('chk-total').textContent = `L. ${totals.total.toFixed(2)}`;
     
-    document.getElementById('checkout-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('submit-btn'); btn.innerHTML = 'Procesando...'; btn.disabled = true;
-        const formData = new FormData(e.target);
-        
-        // Número aleatorio de orden
-        const randomNum = Math.floor(100000 + Math.random() * 900000);
-        const orderNum = 'CT-' + randomNum;
-        
-        // Formato de fecha exacto al del requerimiento
-        const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-        const dateStr = new Date().toLocaleString('es-HN', options);
-        
-        orderDataBackup = { num: orderNum, date: dateStr, client: formData.get('nombre').toUpperCase(), payment: formData.get('pago'), items: [...cart], totals: totals };
-        
-        setTimeout(() => {
-            generatePDF(orderDataBackup);
-            document.getElementById('checkout-container').classList.add('hidden');
-            document.getElementById('success-screen').classList.remove('hidden');
-            window.appStore.empty();
-        }, 1000);
+    // Toggle Buttons based on Payment Method
+    const radioBtns = document.querySelectorAll('input[name="pago"]');
+    const stdBtnContainer = document.getElementById('standard-btn-container');
+    const paypalContainer = document.getElementById('paypal-btn-container');
+    
+    radioBtns.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            if(e.target.value === 'PayPal') {
+                stdBtnContainer.classList.add('hidden');
+                paypalContainer.classList.remove('hidden');
+            } else {
+                stdBtnContainer.classList.remove('hidden');
+                paypalContainer.classList.add('hidden');
+            }
+        });
     });
 
-    document.getElementById('download-pdf-btn').addEventListener('click', () => { if(orderDataBackup) generatePDF(orderDataBackup); });
+    // Standard Submit Form (Efectivo / Transferencia)
+    document.getElementById('checkout-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const paymentMethod = document.querySelector('input[name="pago"]:checked').value;
+        if(paymentMethod === 'PayPal') return; // Should not reach here normally, but just in case
+        
+        const btn = document.getElementById('submit-btn'); 
+        btn.innerHTML = 'Procesando...'; 
+        btn.disabled = true;
+        
+        processOrder(paymentMethod);
+    });
+
+    // PayPal Buttons Implementation
+    paypal.Buttons({
+        onClick: function(data, actions) {
+            // Validate form manually before launching PayPal popup
+            const form = document.getElementById('checkout-form');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return actions.reject();
+            }
+            return actions.resolve();
+        },
+        createOrder: function(data, actions) {
+            const totalUSD = (totals.total / CONVERSION_RATE).toFixed(2);
+            return actions.order.create({
+                purchase_units: [{
+                    amount: { value: totalUSD }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                processOrder('PayPal Sandbox (ID: ' + details.id + ')');
+            });
+        },
+        onError: function(err) {
+            console.error('PayPal Error:', err);
+            alert("Hubo un error procesando el pago con PayPal.");
+        }
+    }).render('#paypal-buttons-render');
+
+    // Re-download PDF listener
+    document.getElementById('download-pdf-btn').addEventListener('click', () => { 
+        if(orderDataBackup) generatePDF(orderDataBackup); 
+    });
 });
+
+function processOrder(paymentMethodString) {
+    const formData = new FormData(document.getElementById('checkout-form'));
+    const randomNum = Math.floor(100000 + Math.random() * 900000);
+    const orderNum = 'CT-' + randomNum;
+    
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const dateStr = new Date().toLocaleString('es-HN', options);
+    
+    orderDataBackup = { 
+        num: orderNum, 
+        date: dateStr, 
+        client: formData.get('nombre').toUpperCase(), 
+        payment: paymentMethodString, 
+        items: [...window.appStore.cart], 
+        totals: window.appStore.getTotals() 
+    };
+    
+    setTimeout(() => {
+        generatePDF(orderDataBackup);
+        document.getElementById('checkout-container').classList.add('hidden');
+        document.getElementById('success-screen').classList.remove('hidden');
+        window.appStore.empty();
+    }, 800);
+}
 
 function generatePDF(data) {
     const { jsPDF } = window.jspdf; 
