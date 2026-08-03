@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - Café & Tueste Bistro</title>
+    <title>Detalle del Producto - Café & Tueste Bistro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    
     <style>
         .img-fallback { display: flex; align-items: center; justify-content: center; background-color: #f5f5f4; color: #78716c; text-align: center; padding: 1rem; font-size: 0.875rem; }
     </style>
@@ -19,6 +17,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Navbar ORIGINAL RESTAURADO -->
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-stone-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -42,29 +41,15 @@
     </nav>
     <main class="flex-grow">
         
-<div class="max-w-4xl mx-auto px-4 py-16">
-    <h1 class="font-serif text-4xl font-bold text-stone-900 mb-8 border-b pb-4">Términos y Condiciones</h1>
-    <div class="prose prose-stone max-w-none text-stone-600 space-y-6">
-        <p><strong>Vigencia desde:</strong> Agosto de 2026</p>
-        
-        <h3 class="text-xl font-bold text-stone-900">1. Aceptación de los Términos</h3>
-        <p>Al acceder y realizar compras en el sitio web de Café & Tueste Bistro, usted acepta estar sujeto a los presentes términos y condiciones, a nuestra Política de Privacidad y a todas las leyes aplicables.</p>
-        
-        <h3 class="text-xl font-bold text-stone-900">2. Precios y Disponibilidad</h3>
-        <p>Todos los precios mostrados en nuestro catálogo digital están expresados en Lempiras Hondureños (L.) a menos que se indique lo contrario. Los precios están sujetos a cambios sin previo aviso. Todos los productos, en particular la panadería fresca, están sujetos a disponibilidad de inventario diario.</p>
-        
-        <h3 class="text-xl font-bold text-stone-900">3. Proceso de Facturación y Pago</h3>
-        <p>Los métodos de pago aceptados son: Efectivo contra entrega (si aplica), Transferencia Bancaria y pagos electrónicos vía <strong>PayPal</strong>. Todas las órdenes en línea generan una factura digital (PDF) que incluye el Impuesto Sobre Venta (ISV del 15%). El uso fraudulento de tarjetas o cuentas de PayPal está estrictamente penado por la ley.</p>
-        
-        <h3 class="text-xl font-bold text-stone-900">4. Entregas y Tiempos de Preparación</h3>
-        <p>El tiempo estimado de preparación habitual es de 15 a 20 minutos. Este tiempo es una estimación y puede variar según el volumen de demanda en la sucursal. Nos reservamos el derecho de modificar los tiempos de entrega notificando al usuario a través de los datos de contacto proporcionados.</p>
-        
-        <h3 class="text-xl font-bold text-stone-900">5. Política de Reembolsos</h3>
-        <p>Debido a la naturaleza perecedera de nuestros productos (alimentos y bebidas preparados), no aceptamos devoluciones una vez que el producto ha sido entregado en óptimas condiciones. En caso de error por parte de nuestro establecimiento (producto equivocado o en mal estado), ofreceremos el reemplazo del mismo o un reembolso tras la verificación del caso.</p>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="product-container">
+    <div class="text-center py-20">
+        <i class="fa-solid fa-circle-notch fa-spin text-4xl text-amber-600"></i>
+        <p class="mt-4 text-stone-600">Cargando producto...</p>
     </div>
 </div>
 
     </main>
+    <!-- Footer ORIGINAL RESTAURADO -->
     <footer class="bg-stone-900 text-stone-300 py-12 mt-12 border-t-4 border-amber-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -98,6 +83,85 @@
     </footer>
     <script src="js/db.js"></script>
     <script src="js/store.js"></script>
-    
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const product = PRODUCT_DB.find(p => p.id === id);
+    const container = document.getElementById('product-container');
+
+    if(!product) {
+        container.innerHTML = `
+            <div class="text-center py-20">
+                <i class="fa-solid fa-triangle-exclamation text-5xl text-stone-400 mb-4"></i>
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Producto no encontrado</h2>
+                <a href="catalogo.html" class="text-amber-700 font-bold hover:underline">Volver al catálogo</a>
+            </div>`;
+        return;
+    }
+
+    let metaText = "Preparado al momento";
+    if(product.category === "Cafés") metaText = "Presentación de 1 Lb — grano o molido";
+    if(product.category === "Panadería" || product.category === "Postres") metaText = "Horneado fresco del día";
+
+    container.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+            <!-- Imagen Izquierda -->
+            <div class="w-full md:w-1/2 bg-stone-100 rounded-3xl p-8 flex items-center justify-center min-h-[400px] relative overflow-hidden img-fallback">
+                <img src="${product.img}" alt="${product.name}" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+                <div class="z-0 text-center">
+                    <i class="fa-regular fa-image text-4xl mb-4 text-stone-300"></i><br>
+                    <span class="text-sm font-bold text-stone-500">${product.img.split('/').pop()}</span>
+                </div>
+            </div>
+
+            <!-- Detalles Derecha -->
+            <div class="w-full md:w-1/2">
+                <span class="text-stone-400 font-bold text-sm tracking-wider uppercase mb-2 block">${product.category}</span>
+                <h1 class="font-serif text-4xl md:text-5xl font-bold text-stone-900 mb-6 leading-tight">${product.name}</h1>
+                
+                <p class="text-stone-500 font-medium mb-6">${metaText}</p>
+                
+                <div class="text-3xl font-bold text-amber-700 mb-8">
+                    L. ${product.price.toFixed(2)}
+                </div>
+
+                <p class="text-stone-600 leading-relaxed mb-10 text-lg">
+                    ${product.longDesc}
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <!-- Selector de cantidad -->
+                    <div class="flex items-center border border-stone-300 rounded-lg bg-white px-2 py-1 w-full sm:w-auto h-14 shadow-sm">
+                        <button id="btn-minus" class="w-10 h-10 flex items-center justify-center text-stone-500 hover:text-amber-600 font-bold text-xl transition">-</button>
+                        <input type="number" id="qty-input" value="1" min="1" max="20" class="w-16 text-center font-bold text-stone-900 focus:outline-none bg-transparent" readonly>
+                        <button id="btn-plus" class="w-10 h-10 flex items-center justify-center text-stone-500 hover:text-amber-600 font-bold text-xl transition">+</button>
+                    </div>
+
+                    <!-- Botón agregar -->
+                    <button id="btn-add" class="w-full sm:w-auto flex-grow bg-stone-900 hover:bg-amber-600 text-white font-bold text-lg h-14 rounded-lg transition shadow-md">
+                        Agregar al carrito
+                    </button>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="catalogo.html" class="text-stone-500 hover:text-amber-700 font-medium transition flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Seguir explorando el menú
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    let qty = 1;
+    const qtyInput = document.getElementById('qty-input');
+    document.getElementById('btn-minus').onclick = () => { if(qty > 1) { qty--; qtyInput.value = qty; } };
+    document.getElementById('btn-plus').onclick = () => { qty++; qtyInput.value = qty; };
+
+    document.getElementById('btn-add').onclick = () => {
+        window.appStore.add(product.id, qty);
+    };
+});
+</script>
 </body>
 </html>

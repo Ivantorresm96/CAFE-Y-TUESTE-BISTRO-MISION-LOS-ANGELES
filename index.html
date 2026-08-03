@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    
     <style>
         .img-fallback { display: flex; align-items: center; justify-content: center; background-color: #f5f5f4; color: #78716c; text-align: center; padding: 1rem; font-size: 0.875rem; }
     </style>
@@ -19,6 +17,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Navbar ORIGINAL RESTAURADO -->
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-stone-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -58,6 +57,7 @@
 </div>
 
     </main>
+    <!-- Footer ORIGINAL RESTAURADO -->
     <footer class="bg-stone-900 text-stone-300 py-12 mt-12 border-t-4 border-amber-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredIds = ['cf6', 'c7', 'po1', 'p4'];
     const grid = document.getElementById('featured-grid');
     grid.innerHTML = PRODUCT_DB.filter(p => featuredIds.includes(p.id)).map(p => `
-        <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+        <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col cursor-pointer" onclick="window.location.href='producto.html?id=${p.id}'">
             <div class="relative aspect-[4/3] overflow-hidden bg-stone-100 img-fallback">
                 <img src="${p.img}" alt="${p.name}" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-10" onerror="this.style.display='none'">
                 <div class="z-0 text-center">
@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="p-6 flex flex-col flex-grow">
                 <span class="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">${p.category}</span>
-                <h3 class="font-bold text-lg text-stone-900 mb-2">${p.name}</h3>
+                <h3 class="font-bold text-lg text-stone-900 mb-2 group-hover:text-amber-700 transition">${p.name}</h3>
                 <div class="mt-auto flex items-center justify-between pt-4">
                     <span class="font-bold text-xl text-stone-900">L. ${p.price.toFixed(2)}</span>
-                    <button onclick="window.appStore.add('${p.id}')" class="bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                    <button onclick="event.stopPropagation(); window.appStore.add('${p.id}', 1)" class="bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
                         <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>

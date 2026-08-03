@@ -5,7 +5,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 55, 
         tag: "Popular", 
-        desc: "Concentrado y con cuerpo denso.", 
+        desc: "Concentrado y con cuerpo denso.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este espresso de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/espresso.jpg" 
     },
     {
@@ -14,7 +15,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 70, 
         tag: "", 
-        desc: "Doble carga de energía pura.", 
+        desc: "Doble carga de energía pura.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este espresso doble de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/espresso-doble.jpg" 
     },
     {
@@ -23,7 +25,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 65, 
         tag: "", 
-        desc: "Espresso suavizado con agua caliente.", 
+        desc: "Espresso suavizado con agua caliente.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este americano de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/americano.jpg" 
     },
     {
@@ -32,7 +35,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 85, 
         tag: "Clásico", 
-        desc: "Espresso con leche vaporizada y espuma.", 
+        desc: "Espresso con leche vaporizada y espuma.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este cappuccino de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/cappuccino.jpg" 
     },
     {
@@ -41,7 +45,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 95, 
         tag: "", 
-        desc: "Suave espresso con abundante leche.", 
+        desc: "Suave espresso con abundante leche.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este latte de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/latte.jpg" 
     },
     {
@@ -50,7 +55,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 110, 
         tag: "", 
-        desc: "Deliciosa mezcla de café y chocolate.", 
+        desc: "Deliciosa mezcla de café y chocolate.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este mocha de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/mocha.jpg" 
     },
     {
@@ -59,7 +65,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 90, 
         tag: "Recomendado", 
-        desc: "Microespuma sedosa sobre doble espresso.", 
+        desc: "Microespuma sedosa sobre doble espresso.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este flat white de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/flat-white.jpg" 
     },
     {
@@ -68,7 +75,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 65, 
         tag: "", 
-        desc: "Espresso 'manchado' con leche vaporizada.", 
+        desc: "Espresso 'manchado' con leche vaporizada.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este macchiato de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/macchiato.jpg" 
     },
     {
@@ -77,7 +85,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 75, 
         tag: "Tradicional", 
-        desc: "Café con canela y piloncillo.", 
+        desc: "Café con canela y piloncillo.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este café de olla de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/cafe-de-olla.jpg" 
     },
     {
@@ -86,7 +95,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 80, 
         tag: "", 
-        desc: "Extracción limpia y llena de matices.", 
+        desc: "Extracción limpia y llena de matices.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este café filtrado de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/cafe-filtrado.jpg" 
     },
     {
@@ -95,7 +105,8 @@ const PRODUCT_DB = [
         category: "Cafés", 
         price: 70, 
         tag: "", 
-        desc: "Proporción igual de espresso y leche.", 
+        desc: "Proporción igual de espresso y leche.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este cortado de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/cortado.jpg" 
     },
     {
@@ -103,8 +114,9 @@ const PRODUCT_DB = [
         name: "Affogato", 
         category: "Cafés", 
         price: 105, 
-        tag: "Postre", 
-        desc: "Helado de vainilla ahogado en espresso.", 
+        tag: "Postre/Café", 
+        desc: "Helado de vainilla ahogado en espresso.",
+        longDesc: "Cultivado por pequeños productores en zonas montañosas de Honduras, este affogato de especialidad se tuesta artesanalmente en nuestro centro. Cada taza asegura un perfil de sabor único, trazabilidad completa y una extracción perfecta que resalta sus notas naturales.",
         img: "img/products/affogato.jpg" 
     },
     {
@@ -113,7 +125,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 105, 
         tag: "Popular", 
-        desc: "Latte clásico servido sobre hielo.", 
+        desc: "Latte clásico servido sobre hielo.",
+        longDesc: "Refrescante y equilibrado, nuestro iced latte es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/iced-latte.jpg" 
     },
     {
@@ -122,7 +135,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 75, 
         tag: "", 
-        desc: "Americano refrescante sobre hielo.", 
+        desc: "Americano refrescante sobre hielo.",
+        longDesc: "Refrescante y equilibrado, nuestro iced americano es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/iced-americano.jpg" 
     },
     {
@@ -131,7 +145,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 95, 
         tag: "Nuevo", 
-        desc: "Extraído en frío por 18 horas.", 
+        desc: "Extraído en frío por 18 horas.",
+        longDesc: "Refrescante y equilibrado, nuestro cold brew es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/cold-brew.jpg" 
     },
     {
@@ -140,7 +155,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 105, 
         tag: "", 
-        desc: "Cold Brew con un toque de vainilla.", 
+        desc: "Cold Brew con un toque de vainilla.",
+        longDesc: "Refrescante y equilibrado, nuestro cold brew vainilla es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/cold-brew-vainilla.jpg" 
     },
     {
@@ -149,7 +165,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 105, 
         tag: "", 
-        desc: "Cold Brew endulzado con caramelo.", 
+        desc: "Cold Brew endulzado con caramelo.",
+        longDesc: "Refrescante y equilibrado, nuestro cold brew caramelo es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/cold-brew-caramelo.jpg" 
     },
     {
@@ -158,7 +175,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 125, 
         tag: "Más vendido", 
-        desc: "Mezcla helada de café y chocolate.", 
+        desc: "Mezcla helada de café y chocolate.",
+        longDesc: "Refrescante y equilibrado, nuestro frappé mocha es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/frappe-mocha.jpg" 
     },
     {
@@ -167,7 +185,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 125, 
         tag: "", 
-        desc: "Delicioso frappé con salsa de caramelo.", 
+        desc: "Delicioso frappé con salsa de caramelo.",
+        longDesc: "Refrescante y equilibrado, nuestro frappé caramelo es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/frappe-caramelo.jpg" 
     },
     {
@@ -176,7 +195,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 125, 
         tag: "", 
-        desc: "Intenso sabor a chocolate coronado con crema.", 
+        desc: "Intenso sabor a chocolate coronado con crema.",
+        longDesc: "Refrescante y equilibrado, nuestro frappé chocolate es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/frappe-chocolate.jpg" 
     },
     {
@@ -185,7 +205,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 125, 
         tag: "", 
-        desc: "Dulce y refrescante crema de vainilla.", 
+        desc: "Dulce y refrescante crema de vainilla.",
+        longDesc: "Refrescante y equilibrado, nuestro frappuccino vainilla es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/frappuccino-vainilla.jpg" 
     },
     {
@@ -194,7 +215,8 @@ const PRODUCT_DB = [
         category: "Chocolates", 
         price: 85, 
         tag: "Clásico", 
-        desc: "Reconfortante chocolate oscuro derretido.", 
+        desc: "Reconfortante chocolate oscuro derretido.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro chocolate caliente se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/chocolate-caliente.jpg" 
     },
     {
@@ -203,7 +225,8 @@ const PRODUCT_DB = [
         category: "Chocolates", 
         price: 95, 
         tag: "", 
-        desc: "Suave y cremosa bebida de cacao blanco.", 
+        desc: "Suave y cremosa bebida de cacao blanco.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro chocolate blanco se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/chocolate-blanco.jpg" 
     },
     {
@@ -212,7 +235,8 @@ const PRODUCT_DB = [
         category: "Chocolates", 
         price: 95, 
         tag: "", 
-        desc: "Tu chocolate favorito, ahora refrescante.", 
+        desc: "Tu chocolate favorito, ahora refrescante.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro chocolate helado se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/chocolate-helado.jpg" 
     },
     {
@@ -221,7 +245,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 60, 
         tag: "", 
-        desc: "Infusión antioxidante y ligera.", 
+        desc: "Infusión antioxidante y ligera.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro té verde se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/te-verde.jpg" 
     },
     {
@@ -230,7 +255,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 60, 
         tag: "", 
-        desc: "Clásico té negro intenso.", 
+        desc: "Clásico té negro intenso.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro té negro se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/te-negro.jpg" 
     },
     {
@@ -239,7 +265,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 95, 
         tag: "Recomendado", 
-        desc: "Té especiado con leche vaporizada.", 
+        desc: "Té especiado con leche vaporizada.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro chai latte se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/chai-latte.jpg" 
     },
     {
@@ -248,7 +275,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 110, 
         tag: "Nuevo", 
-        desc: "Té verde japonés en polvo con leche.", 
+        desc: "Té verde japonés en polvo con leche.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro matcha latte se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/matcha-latte.jpg" 
     },
     {
@@ -257,7 +285,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 70, 
         tag: "", 
-        desc: "Té frío con sabor frutal.", 
+        desc: "Té frío con sabor frutal.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro té helado durazno se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/te-helado-durazno.jpg" 
     },
     {
@@ -266,7 +295,8 @@ const PRODUCT_DB = [
         category: "Té", 
         price: 70, 
         tag: "", 
-        desc: "Refrescante té negro con limón.", 
+        desc: "Refrescante té negro con limón.",
+        longDesc: "Una infusión reconfortante y llena de aroma. Nuestro té helado limón se prepara utilizando hojas y cacaos seleccionados cuidadosamente para brindarte una experiencia relajante y un sabor profundo en cada sorbo.",
         img: "img/products/te-helado-limon.jpg" 
     },
     {
@@ -275,7 +305,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 60, 
         tag: "", 
-        desc: "Clásica y refrescante.", 
+        desc: "Clásica y refrescante.",
+        longDesc: "Refrescante y equilibrado, nuestro limonada natural es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/limonada-natural.jpg" 
     },
     {
@@ -284,7 +315,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 65, 
         tag: "Refrescante", 
-        desc: "Toque de menta fresca.", 
+        desc: "Toque de menta fresca.",
+        longDesc: "Refrescante y equilibrado, nuestro limonada hierbabuena es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/limonada-hierbabuena.jpg" 
     },
     {
@@ -293,7 +325,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 65, 
         tag: "", 
-        desc: "Dulce limonada con frutos rojos.", 
+        desc: "Dulce limonada con frutos rojos.",
+        longDesc: "Refrescante y equilibrado, nuestro limonada rosa es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/limonada-rosa.jpg" 
     },
     {
@@ -302,7 +335,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 110, 
         tag: "", 
-        desc: "Batido natural de fresas.", 
+        desc: "Batido natural de fresas.",
+        longDesc: "Refrescante y equilibrado, nuestro smoothie fresa es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/smoothie-fresa.jpg" 
     },
     {
@@ -311,7 +345,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 110, 
         tag: "", 
-        desc: "Batido tropical de mango.", 
+        desc: "Batido tropical de mango.",
+        longDesc: "Refrescante y equilibrado, nuestro smoothie mango es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/smoothie-mango.jpg" 
     },
     {
@@ -320,7 +355,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 115, 
         tag: "", 
-        desc: "Mezcla de frutas exóticas.", 
+        desc: "Mezcla de frutas exóticas.",
+        longDesc: "Refrescante y equilibrado, nuestro smoothie tropical es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/smoothie-tropical.jpg" 
     },
     {
@@ -329,7 +365,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 120, 
         tag: "", 
-        desc: "Malteada cremosa de chocolate.", 
+        desc: "Malteada cremosa de chocolate.",
+        longDesc: "Refrescante y equilibrado, nuestro milkshake chocolate es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/milkshake-chocolate.jpg" 
     },
     {
@@ -338,7 +375,8 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 120, 
         tag: "", 
-        desc: "Clásica malteada de vainilla.", 
+        desc: "Clásica malteada de vainilla.",
+        longDesc: "Refrescante y equilibrado, nuestro milkshake vainilla es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/milkshake-vainilla.jpg" 
     },
     {
@@ -347,61 +385,68 @@ const PRODUCT_DB = [
         category: "Bebidas Frías", 
         price: 125, 
         tag: "Favorito", 
-        desc: "Malteada con galleta triturada.", 
+        desc: "Malteada con galleta triturada.",
+        longDesc: "Refrescante y equilibrado, nuestro milkshake oreo es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/milkshake-oreo.jpg" 
     },
     {
         id: "j1", 
-        name: "Naranja", 
+        name: "Jugo de Naranja", 
         category: "Jugos", 
         price: 60, 
         tag: "", 
-        desc: "Jugo recién exprimido.", 
+        desc: "Recién exprimido.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de naranja es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/naranja.jpg" 
     },
     {
         id: "j2", 
-        name: "Piña", 
+        name: "Jugo de Piña", 
         category: "Jugos", 
         price: 60, 
         tag: "", 
-        desc: "Jugo natural de piña.", 
+        desc: "Jugo natural de piña.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de piña es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/pina.jpg" 
     },
     {
         id: "j3", 
-        name: "Sandía", 
+        name: "Jugo de Sandía", 
         category: "Jugos", 
         price: 60, 
         tag: "", 
-        desc: "Jugo hidratante de sandía.", 
+        desc: "Jugo hidratante de sandía.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de sandía es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/sandia.jpg" 
     },
     {
         id: "j4", 
-        name: "Maracuyá", 
+        name: "Jugo de Maracuyá", 
         category: "Jugos", 
         price: 65, 
         tag: "", 
-        desc: "El toque ácido perfecto.", 
+        desc: "El toque ácido perfecto.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de maracuyá es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/maracuya.jpg" 
     },
     {
         id: "j5", 
-        name: "Mango", 
+        name: "Jugo de Mango", 
         category: "Jugos", 
         price: 65, 
         tag: "", 
-        desc: "Jugo dulce de mango.", 
+        desc: "Jugo dulce de mango.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de mango es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/mango.jpg" 
     },
     {
         id: "j6", 
-        name: "Fresa", 
+        name: "Jugo de Fresa", 
         category: "Jugos", 
         price: 65, 
         tag: "", 
-        desc: "Jugo natural de fresas.", 
+        desc: "Jugo natural de fresas.",
+        longDesc: "Refrescante y equilibrado, nuestro jugo de fresa es preparado al momento con ingredientes de la más alta calidad. Ideal para acompañar tus tardes o refrescarte con un sabor auténtico y natural, sin conservantes añadidos.",
         img: "img/products/fresa.jpg" 
     },
     {
@@ -410,7 +455,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 65, 
         tag: "Clásico", 
-        desc: "Masa hojaldrada y mantequilla.", 
+        desc: "Masa hojaldrada y mantequilla.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso croissant está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/croissant.jpg" 
     },
     {
@@ -419,7 +465,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 120, 
         tag: "", 
-        desc: "Pan tostado con jamón y queso.", 
+        desc: "Pan tostado con jamón y queso.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso panini está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/panini.jpg" 
     },
     {
@@ -428,7 +475,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 85, 
         tag: "", 
-        desc: "Bagel con queso crema.", 
+        desc: "Bagel con queso crema.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso bagel está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/bagel.jpg" 
     },
     {
@@ -437,7 +485,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 140, 
         tag: "Recomendado", 
-        desc: "Pollo, tocino, lechuga y tomate.", 
+        desc: "Pollo, tocino, lechuga y tomate.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso sandwich club está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/sandwich-club.jpg" 
     },
     {
@@ -446,7 +495,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 135, 
         tag: "", 
-        desc: "Pechuga en pan artesanal.", 
+        desc: "Pechuga en pan artesanal.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso sandwich de pollo está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/sandwich-de-pollo.jpg" 
     },
     {
@@ -455,7 +505,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 55, 
         tag: "", 
-        desc: "Suave, esponjoso y casero.", 
+        desc: "Suave, esponjoso y casero.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso pan de banano está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/pan-de-banano.jpg" 
     },
     {
@@ -464,7 +515,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 65, 
         tag: "", 
-        desc: "Muffin con chispas de chocolate.", 
+        desc: "Muffin con chispas de chocolate.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso muffin chocolate está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/muffin-chocolate.jpg" 
     },
     {
@@ -473,7 +525,8 @@ const PRODUCT_DB = [
         category: "Panadería", 
         price: 65, 
         tag: "", 
-        desc: "Muffin frutal.", 
+        desc: "Muffin frutal.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso muffin arándanos está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/muffin-arandanos.jpg" 
     },
     {
@@ -482,7 +535,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 110, 
         tag: "Más vendido", 
-        desc: "Tarta de queso con frutos rojos.", 
+        desc: "Tarta de queso con frutos rojos.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso cheesecake está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/cheesecake.jpg" 
     },
     {
@@ -491,7 +545,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 120, 
         tag: "Italiano", 
-        desc: "Postre de café y mascarpone.", 
+        desc: "Postre de café y mascarpone.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso tiramisú está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/tiramisu.jpg" 
     },
     {
@@ -500,7 +555,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 75, 
         tag: "", 
-        desc: "Bizcocho denso de chocolate.", 
+        desc: "Bizcocho denso de chocolate.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso brownie está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/brownie.jpg" 
     },
     {
@@ -509,7 +565,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 95, 
         tag: "", 
-        desc: "Relleno ácido y merengue.", 
+        desc: "Relleno ácido y merengue.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso pie de limón está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/pie-de-limon.jpg" 
     },
     {
@@ -518,7 +575,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 45, 
         tag: "", 
-        desc: "Galletas artesanales crujientes.", 
+        desc: "Galletas artesanales crujientes.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso galletas está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/galletas.jpg" 
     },
     {
@@ -527,7 +585,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 50, 
         tag: "", 
-        desc: "Glaseado perfecto.", 
+        desc: "Glaseado perfecto.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso donas está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/donas.jpg" 
     },
     {
@@ -536,7 +595,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 110, 
         tag: "", 
-        desc: "Doble capa de chocolate.", 
+        desc: "Doble capa de chocolate.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso pastel de chocolate está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/pastel-chocolate.jpg" 
     },
     {
@@ -545,7 +605,8 @@ const PRODUCT_DB = [
         category: "Postres", 
         price: 115, 
         tag: "Nuevo", 
-        desc: "Textura suave con frosting.", 
+        desc: "Textura suave con frosting.",
+        longDesc: "Horneado fresco del día en nuestras instalaciones. Este delicioso pastel red velvet está elaborado con ingredientes premium siguiendo recetas clásicas, ofreciendo una textura inigualable y un balance perfecto de dulzor para acompañar tu café.",
         img: "img/products/pastel-red-velvet.jpg" 
     },
 ];
